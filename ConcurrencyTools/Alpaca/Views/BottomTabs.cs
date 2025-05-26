@@ -167,7 +167,7 @@ namespace Microsoft.Concurrency.TestTools.Alpaca
             if (!model.controller.closing)
             {
                 if (tabcontrol1.SelectedTab == tabpgTaskresults
-                    && current_run != null
+                    && current_run != null && current_run.Task != null
                     && !current_run.Task.IsComplete
                     )
                 {
