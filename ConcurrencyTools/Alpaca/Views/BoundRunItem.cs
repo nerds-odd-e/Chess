@@ -22,7 +22,8 @@ namespace Microsoft.Concurrency.TestTools.Alpaca.Views
             // Bind the text now since it won't ever change
             DisplayText = run.DisplayName ?? run.MenuItemTypeName();
 
-            Run.Task.StatusChanged += Run_StatusChangeEvt;
+            if (Run.Task != null)
+                Run.Task.StatusChanged += Run_StatusChangeEvt;
             Update();
         }
 

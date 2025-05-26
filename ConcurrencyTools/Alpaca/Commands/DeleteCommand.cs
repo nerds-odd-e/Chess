@@ -139,7 +139,7 @@ namespace Microsoft.Concurrency.TestTools.Alpaca
                         continue;
 
                     // if task is not complete, try to cancel it
-                    if (!run.Task.IsComplete)
+                    if (run.Task != null && !run.Task.IsComplete)
                     {
                         if (!run.Task.Cancel())
                         {

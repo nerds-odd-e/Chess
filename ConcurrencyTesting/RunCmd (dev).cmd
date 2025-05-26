@@ -15,8 +15,8 @@
 @ECHO Setting up development environment...
 ::SET CHESSHOME=C:\Chess\dev\main
 @SET CHESSHOME=%~dp0..
-@SET PATH=%CHESSHOME%\bin;%PATH%
-@SET MCHESS_PATH=%CHESSHOME%\bin
+@SET PATH=%CHESSHOME%\debug;%PATH%
+@SET MCHESS_PATH=%CHESSHOME%\debug
 
 :: Allow cmd files to know when they're in the dev environment and to allow them to run
 :: against the Debug builds
