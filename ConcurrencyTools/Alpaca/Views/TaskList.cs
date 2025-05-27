@@ -26,7 +26,7 @@ namespace Microsoft.Concurrency.TestTools.Alpaca
         private Model model;
 
         private BindingSource _tasksBindingSource;
-        private PropertyBindingList<BoundRunItem> _tasks;
+        public static PropertyBindingList<BoundRunItem> _tasks;
         private Dictionary<int, BoundRunItem> _tasksByID = new Dictionary<int, BoundRunItem>();
 
         private List<DataGridViewRow> _selectedRows = new List<DataGridViewRow>();

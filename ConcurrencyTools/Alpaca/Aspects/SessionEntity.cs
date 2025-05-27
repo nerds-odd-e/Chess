@@ -224,7 +224,7 @@ namespace Microsoft.Concurrency.TestTools.Alpaca.Aspects
 
         public int NextTaskID
         {
-            get { return (int?)DataElement.Attribute(XName_ANextTaskID) ?? 1; }
+            get { return (int?)DataElement.Attribute(XName_ANextTaskID) ?? (TaskList._tasks != null ? TaskList._tasks.Count() + 1 : 1); }
             set { DataElement.SetAttributeValue(XName_ANextTaskID, value); }
         }
 
