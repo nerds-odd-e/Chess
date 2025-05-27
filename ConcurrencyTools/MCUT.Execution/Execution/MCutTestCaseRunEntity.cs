@@ -62,22 +62,25 @@ namespace Microsoft.Concurrency.TestTools.Execution
         {
             StringBuilder sb = new StringBuilder();
 
-            var startScriptPath = Path.Combine(Task.TaskFolderPath, Task.StartScriptFilename);
-            sb.AppendLine(" " + Task.StartScriptFilename);
-            sb.AppendLine(new string('*', Task.StartScriptFilename.Length + 2));
-            if (File.Exists(startScriptPath))
-                sb.Append(File.ReadAllText(startScriptPath));
-            sb.AppendLine();
-
-            // If the test uses mchess, then lets show its startup script too.
-            if (OwningTest is ITestUsesMChess)
+            if (Task != null)
             {
-                var mchessStartScriptPath = Path.Combine(Task.TaskFolderPath, AppTasks.ExecuteMChessTask.StartMChessScriptFilename);
-                sb.AppendLine(" " + AppTasks.ExecuteMChessTask.StartMChessScriptFilename);
-                sb.AppendLine(new string('*', AppTasks.ExecuteMChessTask.StartMChessScriptFilename.Length + 2));
-                if (File.Exists(mchessStartScriptPath))
-                    sb.Append(File.ReadAllText(mchessStartScriptPath));
+                var startScriptPath = Path.Combine(Task.TaskFolderPath, Task.StartScriptFilename);
+                sb.AppendLine(" " + Task.StartScriptFilename);
+                sb.AppendLine(new string('*', Task.StartScriptFilename.Length + 2));
+                if (File.Exists(startScriptPath))
+                    sb.Append(File.ReadAllText(startScriptPath));
                 sb.AppendLine();
+
+                // If the test uses mchess, then lets show its startup script too.
+                if (OwningTest is ITestUsesMChess)
+                {
+                    var mchessStartScriptPath = Path.Combine(Task.TaskFolderPath, AppTasks.ExecuteMChessTask.StartMChessScriptFilename);
+                    sb.AppendLine(" " + AppTasks.ExecuteMChessTask.StartMChessScriptFilename);
+                    sb.AppendLine(new string('*', AppTasks.ExecuteMChessTask.StartMChessScriptFilename.Length + 2));
+                    if (File.Exists(mchessStartScriptPath))
+                        sb.Append(File.ReadAllText(mchessStartScriptPath));
+                    sb.AppendLine();
+                }
             }
 
             //

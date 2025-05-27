@@ -23,11 +23,12 @@
 @SET ChessConfig=Debug
 
 :: Make current directory the path of the input cmd file
-@CD /D %~dp1
+::CD /D %~dp1
 
 :: And run the command
 @ECHO Running input command...
-%~nx1
+::%~nx1
+@%1
 IF ERRORLEVEL 1 PAUSE
 
 @PAUSE
