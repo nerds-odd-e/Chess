@@ -28,7 +28,10 @@
 :: And run the command
 @ECHO Running input command...
 ::%~nx1
-@%1
+::@%1
+SET CMD=%1
+SHIFT
+CALL "%CMD%" %*
 IF ERRORLEVEL 1 PAUSE
 
 @PAUSE

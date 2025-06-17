@@ -288,3 +288,7 @@ All.VC.db
 Chess*.nupkg
 buildAndPush.bat
 All.VC.VC.opendb
+
+# Chess test result files
+allResults.xml
+session.tmp
