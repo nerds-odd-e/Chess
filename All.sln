@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ManagedChess", "ManagedChess", "{A0828B24-7662-482E-A6AD-1673AAC695EB}"
 	ProjectSection(FolderStartupServices) = postProject
@@ -49,6 +49,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConcurrencyTesting", "Concu
 		ConcurrencyTesting\LaunchAlpaca.cmd = ConcurrencyTesting\LaunchAlpaca.cmd
 		ConcurrencyTesting\ReadMe.txt = ConcurrencyTesting\ReadMe.txt
 		ConcurrencyTesting\RunCmd (dev).cmd = ConcurrencyTesting\RunCmd (dev).cmd
+		ConcurrencyTesting\RunMChessRegressionTests.cmd = ConcurrencyTesting\RunMChessRegressionTests.cmd
 		ConcurrencyTesting\RunMcutRegressionTests.cmd = ConcurrencyTesting\RunMcutRegressionTests.cmd
 		ManagedTest\testlist.xml = ManagedTest\testlist.xml
 	EndProjectSection

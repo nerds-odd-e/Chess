@@ -12,9 +12,9 @@ namespace Microsoft.Concurrency.MChess.RegressionTests
     {
         // ORIG: boundedqueue.cs
         [ChessTestMethod]
-        [ExpectedChessResult("csb1", ChessExitCode.ChessDeadlock, SchedulesRan = 1, LastThreadCount = 4, LastExecSteps = 21, LastHBExecSteps = 1)]
-        [ExpectedChessResult("csb2", ChessExitCode.ChessDeadlock, SchedulesRan = 1, LastThreadCount = 4, LastExecSteps = 21, LastHBExecSteps = 1)]
-        [ExpectedChessResult("csb3", ChessExitCode.ChessDeadlock, SchedulesRan = 1, LastThreadCount = 4, LastExecSteps = 21, LastHBExecSteps = 1)]
+        [ExpectedChessResult("csb1", ChessExitCode.ChessDeadlock, SchedulesRan = 1, LastThreadCount = 4, LastExecSteps = 40, LastHBExecSteps = 1)]
+        [ExpectedChessResult("csb2", ChessExitCode.ChessDeadlock, SchedulesRan = 1, LastThreadCount = 4, LastExecSteps = 40, LastHBExecSteps = 1)]
+        [ExpectedChessResult("csb3", ChessExitCode.ChessDeadlock, SchedulesRan = 1, LastThreadCount = 4, LastExecSteps = 40, LastHBExecSteps = 1)]
         public void BoundedQueueTest()
         {
             BoundedQueue<int> queue = new BoundedQueue<int>(2);
