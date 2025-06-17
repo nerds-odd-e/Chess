@@ -22,7 +22,17 @@
 @ECHO ON
 @ECHO.
 @ECHO Starting MCut...
-mcut runAllTests ..\..\ConcurrencyTools\RegressionTesting\MChess\bin\%ChessConfig%\MChess.RegressionTests.dll
+SETLOCAL ENABLEDELAYEDEXPANSION
+
+:: Build a new argument string excluding the first one
+SET COUNT=0
+SET ARGS=
+FOR %%A IN (%*) DO (
+    SET /A COUNT+=1
+    IF !COUNT! GTR 1 SET ARGS=!ARGS! %%A
+)
+
+mcut runAllTests ..\..\ConcurrencyTools\RegressionTesting\MChess\bin\%ChessConfig%\MChess.RegressionTests.dll %ARGS%
 ::mcut runAllTests ..\..\ConcurrencyTools\RegressionTesting\RegressionTesting.TestList.%ChessConfig%.xml
 ::@IF NOT ERRORLEVEL 0 PAUSE
 
